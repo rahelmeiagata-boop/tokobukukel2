@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>Checkout</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<div id="successToast" class="success-toast">✅ Pembayaran berhasil!</div>
+<body>
+  <header><h1>Checkout Pembayaran</h1></header>
+
+  <main class="checkout-grid">
+    <section class="checkout-form">
+      <h2>💳 Informasi Pembayaran</h2>
+      <div id="totalDisplay"></div>
+      <form id="paymentForm">
+  <label for="paymentMethod">Metode Pembayaran:</label>
+  <select id="paymentMethod" required>
+    <option value="">-- Pilih Metode --</option>
+    <option value="ewallet">E-Wallet</option>
+    <option value="transfer">Transfer Bank</option>
+  </select>
+
+  <div id="subMethodContainer" style="margin-top:1rem; display:none;">
+    <label for="subMethod">Pilih Channel:</label>
+    <select id="subMethod" required></select>
+  </div>
+
+  <label for="amountPaid">Jumlah Bayar:</label>
+  <input type="number" id="amountPaid" required />
+
+  <button type="submit" class="btn-primary">Bayar Sekarang</button>
+</form>
+    </section>
+
+    <section class="checkout-summary">
+      <h2>🧾 Struk Pembayaran</h2>
+      <div id="receipt" class="receipt-box"></div>
+      <div class="checkout-actions">
+        <button id="printBtn" class="btn-primary" style="display:none;">🖨️ Cetak Bukti</button>
+      </div>
+      <div id="history"></div>
+    </section>
+  </main>
+
+  <script src="checkout.js"></script>
+</body>
+</html>
