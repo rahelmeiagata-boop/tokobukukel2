@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Toko Buku Logika</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Toko Buku Logika</h1>
+    <nav>
+      <input type="text" id="searchInput" placeholder="Cari buku..." />
+      <a href="cart.html">
+      <button id="cartBtn">🛒 <span id="cartCount">0</span></button>
+      </a>
+    </nav>
+  </header>
+
+  <main id="bookList" class="book-grid"></main>
+
+  <div id="toast" class="toast">📚 Buku ditambahkan ke keranjang!</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
